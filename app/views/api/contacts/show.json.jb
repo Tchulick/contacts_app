@@ -3,5 +3,4 @@
   last_name: @contact.last_name,
   :email => @contact.email,
   phone_number: @contact.phone_number,
-
 }
