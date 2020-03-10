@@ -6,4 +6,4 @@
    # phone_number: @contact.phone_number,
    # updated_at: @contact.friendly_updated_at,
   }
-render partial "contact.json.jb", locals: { contact: @contact }
+render partial: "contact.json.jb", locals: { contact: @contact }
