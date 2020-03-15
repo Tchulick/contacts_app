@@ -12,8 +12,11 @@ class Api::ContactsController < ApplicationController
       email: params[:email],
       phone_number: params[:phone_number],
     )
-    @contact.save
-    render "show.json.jb"
+    if @contact.save
+      render "show.json.jb"
+    else
+      render json: { errors: @contact.errors.full_messages }, status: 422
+    end
   end
 
   def show
